@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #475765;
+}
+input,
+.btn {
+  border: 2px solid #536777;
+  border-radius: 15px;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #475765;
+  transition: background-color 300ms ease;
+}
+input {
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+input:hover,
+input:focus,
+input:active {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.error input {
+  border-color: #ff3333;
+}
+.btn {
+  padding: 5px 20px;
+  line-height: 18px;
+  background-color: #536777;
+  color: #fff;
+  text-shadow: 0px 0px 3px #536777;
+  text-decoration: none;
+}
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background-color: rgba(83, 103, 119, 0.3);
+}
+.btn-close {
+  display: block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #536777;
+  color: #fff;
+}
+.btn-close:before,
+.btn-close:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 2px;
+  background-color: #fff;
+}
+.btn-close:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.btn-close:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
