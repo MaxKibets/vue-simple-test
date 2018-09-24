@@ -24,16 +24,16 @@ export default {
 <style>
 .header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 5px 30px;
-  border-bottom: 1px solid #4ea282;
-  background-color: #59c59b;
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid var(--main-border-green);
+  background-color: var(--main-green);
+  box-shadow: var(--main-shadow);
 }
 .header-logo {
   max-width: 35px;
   max-height: 35px;
-  margin-right: auto;
   padding: 10px;
   border-radius: 50%;
   border: 2px solid #536777;

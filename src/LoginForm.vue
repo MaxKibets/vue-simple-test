@@ -1,18 +1,7 @@
 <template>
     <form action="" class="login-form">
-        <div class="login-form-field"
-          :class='{error: errorUserName}'
-        >
-            <label>Name</label>
-            <input type="text" v-model='userName'>
-        </div>
-
-        <div class="login-form-field"
-          :class='{error: errorUserPass}'
-        >
-            <label>Password</label>
-            <input type="password" v-model='userPass'>
-        </div>
+        <input type="text" v-model='userName' :class='{error: errorUserName}' placeholder="Name">
+        <input type="password" v-model='userPass' :class='{error: errorUserPass}' placeholder="Password">
 
         <button class="btn" @click.prevent='login()'>Login</button>
     </form>
@@ -57,13 +46,11 @@ export default {
 <style>
 .login-form {
   display: flex;
+  flex-wrap: wrap;
 }
-.login-form-field {
-  margin: 0px 10px;
-}
-.login-form label {
-  margin-right: 10px;
-  font-weight: 600;
+.login-form input,
+.login-form button {
+  margin-left: 10px;
 }
 </style>
 

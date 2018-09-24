@@ -1,3 +1,11 @@
+:root {
+  --main-white: #fff;
+  --main-green: #59c59b;
+  --main-border-green: #4ea282;
+  --main-dirty-blue: #536777;
+  --main-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +18,7 @@ body {
 }
 input,
 .btn {
-  border: 2px solid #536777;
+  border: 2px solid var(--main-dirty-blue);
   border-radius: 15px;
   outline: none;
   font-size: 1rem;
@@ -27,15 +35,15 @@ input:focus,
 input:active {
   background-color: rgba(255, 255, 255, 0.6);
 }
-.error input {
+input.error {
   border-color: #ff3333;
 }
 .btn {
   padding: 5px 20px;
   line-height: 18px;
-  background-color: #536777;
-  color: #fff;
-  text-shadow: 0px 0px 3px #536777;
+  background-color: var(--main-dirty-blue);
+  color: var(--main-white);
+  text-shadow: 0px 0px 3px var(--main-dirty-blue);
   text-decoration: none;
 }
 .btn:hover,
@@ -49,8 +57,8 @@ input:active {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: #536777;
-  color: #fff;
+  background-color: var(--main-dirty-blue);
+  color: var(--main-white);
 }
 .btn-close:before,
 .btn-close:after {
@@ -60,7 +68,7 @@ input:active {
   left: 50%;
   width: 70%;
   height: 2px;
-  background-color: #fff;
+  background-color: var(--main-white);
 }
 .btn-close:before {
   transform: translate(-50%, -50%) rotate(45deg);

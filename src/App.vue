@@ -5,11 +5,14 @@
       :userName='userName'
       :onLogin='onLogin'
     />
+
+    <todoList v-if='userLoggedIn'/>
   </div>
 </template>
 
 <script>
 import headerBlock from "./HeaderBlock.vue";
+import todoList from "./ToDoList.vue";
 
 export default {
   data() {
@@ -27,7 +30,8 @@ export default {
     }
   },
   components: {
-    headerBlock
+    headerBlock,
+    todoList
   }
 };
 </script>
