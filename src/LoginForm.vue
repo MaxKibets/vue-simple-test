@@ -1,7 +1,7 @@
 <template>
     <form action="" class="login-form">
-        <input type="text" v-model='userName' :class='{error: errorUserName}' placeholder="Name">
-        <input type="password" v-model='userPass' :class='{error: errorUserPass}' placeholder="Password">
+        <input type="text" v-model='userName' :class='{error: hasErrorUserName}' placeholder="Name">
+        <input type="password" v-model='userPass' :class='{error: hasErrorUserPass}' placeholder="Password">
 
         <button class="btn" @click.prevent='login()'>Login</button>
     </form>
@@ -14,8 +14,8 @@ export default {
     return {
       userName: "",
       userPass: "",
-      errorUserName: false,
-      errorUserPass: false
+      hasErrorUserName: false,
+      hasErrorUserPass: false
     };
   },
   methods: {
@@ -24,13 +24,13 @@ export default {
 
       // in the future there should be correct validation, not this shit! :)
       this.userName
-        ? (this.errorUserName = false)
-        : (this.errorUserName = true);
+        ? (this.hasErrorUserName = false)
+        : (this.hasErrorUserName = true);
       this.userPass
-        ? (this.errorUserPass = false)
-        : (this.errorUserPass = true);
+        ? (this.hasErrorUserPass = false)
+        : (this.hasErrorUserPass = true);
 
-      if (!this.errorUserName && !this.errorUserPass) {
+      if (!this.hasErrorUserName && !this.hasErrorUserPass) {
         let data = {
           userName: this.userName,
           userPass: this.userPass

@@ -4,6 +4,8 @@
   --main-border-green: #4ea282;
   --main-dirty-blue: #536777;
   --main-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+
+  --radius: 15px;
 }
 
 * {
@@ -19,7 +21,7 @@ body {
 input,
 .btn {
   border: 2px solid var(--main-dirty-blue);
-  border-radius: 15px;
+  border-radius: var(--radius);
   outline: none;
   font-size: 1rem;
   font-weight: 600;
@@ -52,10 +54,10 @@ input.error {
   background-color: rgba(83, 103, 119, 0.3);
 }
 .btn-close {
-  display: block;
+  display: inline-block;
   position: relative;
-  width: 16px;
-  height: 16px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background-color: var(--main-dirty-blue);
   color: var(--main-white);
@@ -67,7 +69,8 @@ input.error {
   top: 50%;
   left: 50%;
   width: 70%;
-  height: 2px;
+  height: 4px;
+  border-radius: 2px;
   background-color: var(--main-white);
 }
 .btn-close:before {
